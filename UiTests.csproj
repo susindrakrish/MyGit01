@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28638F57-BA6A-4BC8-9F52-AF25CA4354F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DomainUiLive</RootNamespace>
+    <AssemblyName>NCSmoketest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gallio">
+      <HintPath>..\..\..\..\..\..\packages\mbunit.3.4.14.0\lib\net40\Gallio.dll</HintPath>
+    </Reference>
+    <Reference Include="Gallio40">
+      <HintPath>..\..\..\..\..\..\packages\mbunit.3.4.14.0\lib\net40\Gallio40.dll</HintPath>
+    </Reference>
+    <Reference Include="MbUnit">
+      <HintPath>..\..\..\..\..\..\packages\mbunit.3.4.14.0\lib\net40\MbUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="MbUnit40">
+      <HintPath>..\..\..\..\..\..\packages\mbunit.3.4.14.0\lib\net40\MbUnit40.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\..\..\..\..\..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\NUnit 2.6.4\bin\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter">
+      <HintPath>..\..\..\..\..\..\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ObjectSql">
+      <HintPath>..\..\..\..\..\..\packages\ObjectSql.2.0.1.4\lib\ObjectSql.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectSql.SqlServer">
+      <HintPath>..\..\..\..\..\..\packages\ObjectSql.2.0.1.4\lib\ObjectSql.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Protractor">
+      <HintPath>..\..\..\..\..\..\packages\Protractor.0.6.0\lib\net40\Protractor.dll</HintPath>
+    </Reference>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>D:\SeleniumCSharp\selenium-dotnet-2.48.0\net40\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=2.48.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\packages\Selenium.WebDriver.2.48.2\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.48.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\packages\Selenium.Support.2.48.2\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountPanel\Dashboard\Functional\Dashboard.cs" />
+    <Compile Include="AccountPanel\SetupFixture.cs" />
+    <Compile Include="CMS\Smoke\AnApproachAllPaymentModes.cs" />
+    <Compile Include="CMS\Smoke\Apps.cs" />
+    <Compile Include="CMS\Smoke\Domains.cs" />
+    <Compile Include="CMS\Smoke\Hosting.cs" />
+    <Compile Include="CMS\Smoke\Security.cs" />
+    <Compile Include="CMS\Smoke\SignUpClass.cs" />
+    <Compile Include="CMS\Smoke\SignUpUi.cs" />
+    <Compile Include="PageRepository\PageFactory\AP\DashboardPageFactory.cs" />
+    <Compile Include="PageRepository\PageFactory\CMS\AppsPageFactory.cs" />
+    <Compile Include="PageRepository\PageFactory\CMS\CartPageFactory.cs" />
+    <Compile Include="PageRepository\PageFactory\CMS\DomainsPageFactory.cs" />
+    <Compile Include="PageRepository\PageFactory\CMS\HomePageFactory.cs" />
+    <Compile Include="PageRepository\PageFactory\CMS\HostingPageFactory.cs" />
+    <Compile Include="PageRepository\PageFactory\CMS\SecurityPageFactory.cs" />
+    <Compile Include="PageRepository\Pages\AP\DashboardPage.cs" />
+    <Compile Include="PageRepository\Pages\CMS\AppsPage.cs" />
+    <Compile Include="PageRepository\Pages\CMS\DomainsPage.cs" />
+    <Compile Include="PageRepository\Pages\CMS\HostingPage.cs" />
+    <Compile Include="PageRepository\Pages\CMS\SecurityPage.cs" />
+    <Compile Include="PageRepository\Pages\SignInPage.cs" />
+    <Compile Include="Tools\FunctionalHelper\CartHelper.cs" />
+    <Compile Include="AccountPanel\Dashboard\Smoke\Dashbord.cs" />
+    <Compile Include="Tools\FunctionalHelper\Onepager.cs" />
+    <Compile Include="Tools\FunctionalHelper\DomainHelper.cs" />
+    <Compile Include="Tools\FunctionalHelper\SiteHelper.cs" />
+    <Compile Include="Tools\FunctionalHelper\SubscriptionHelper.cs" />
+    <Compile Include="CMS\Functional\CMS Functional Testing.cs" />
+    <Compile Include="Tools\Helpers\CommonUtils.cs" />
+    <Compile Include="Tools\Helpers\DataHelperUserInfo.cs" />
+    <Compile Include="Tools\Helpers\DataHelper.cs" />
+    <Compile Include="Tools\Helpers\ExtendedAttributesDictionary.cs" />
+    <Compile Include="Tools\Helpers\LoadTestHelper .cs" />
+    <Compile Include="Tools\Helpers\SiteFinityHelper.cs" />
+    <Compile Include="Tools\Helpers\UiConstants.cs" />
+    <Compile Include="Tools\Helpers\UiNgHelper.cs" />
+    <Compile Include="Tools\Helpers\UiHelper.cs" />
+    <Compile Include="Tools\Helpers\ConfigHelper.cs" />
+    <Compile Include="Tools\Helpers\UrlHelper.cs" />
+    <Compile Include="Tools\FunctionalHelper\PrivateEmailHelper.cs" />
+    <Compile Include="Tools\Helpers\WebDriverHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\UI\AP\Dashboard.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainControlPanel\AdvancedDns\AdvancedDns.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainControlPanel\AdvancedDns\ManageHostRecords.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainControlPanel\AdvancedDns\Nameservers.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainControlPanel\DomainControlPanel.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainControlPanel\Domain\Domain.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainControlPanel\Products\PrivateEmail\EditAliases.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainControlPanel\Products\PrivateEmail\PrivateEmail.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainControlPanel\Products\PrivateEmail\UpgradeSubscription.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainControlPanel\Products\Products.cs" />
+    <Compile Include="Tools\UI\AP\DomainList\DomainList.cs" />
+    <Compile Include="Tools\UI\AP\OnepagerSubscriptions.cs" />
+    <Compile Include="Tools\UI\AP\ProductListSslCertificates.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Billing\AutoRenewal.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Billing\BillingCheckout.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Billing\PaymentCards.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Billing\ProfileBilling.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Billing\Topup.cs" />
+    <Compile Include="Tools\UI\AP\Profile\PersonalInfo\Addressbook.cs" />
+    <Compile Include="Tools\UI\AP\Profile\PersonalInfo\ProfileAddress.cs" />
+    <Compile Include="Tools\UI\AP\Profile\PersonalInfo\ProfileInfo.cs" />
+    <Compile Include="Tools\UI\AP\Profile\ProfileSecurity.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Tools\Affiliate.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Tools\ApiAccess.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Tools\Categories.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Tools\DnsSettings.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Tools\DomainContactsSettings.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Tools\Notifications.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Tools\ProfileTools.cs" />
+    <Compile Include="Tools\UI\AP\Profile\Tools\WhitelistedIps.cs" />
+    <Compile Include="Tools\UI\AP\Ssl.cs" />
+    <Compile Include="Tools\UI\AP\SslActivate.cs" />
+    <Compile Include="Tools\UI\AP\SslProductPage.cs" />
+    <Compile Include="Tools\UI\CMS\Cart.cs" />
+    <Compile Include="Tools\UI\CMS\HomePage.cs" />
+    <Compile Include="Tools\UI\CMS\PrivateEmailHosting.cs" />
+    <Compile Include="Tools\UI\ExternalWebsites\Paypal.cs" />
+    <Compile Include="Tools\UI\ExternalWebsites\Webmail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config.template">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="app.config.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
